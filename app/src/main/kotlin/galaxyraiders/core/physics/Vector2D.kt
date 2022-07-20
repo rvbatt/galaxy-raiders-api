@@ -55,7 +55,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
   }
 
   fun scalarProject(target: Vector2D): Double {
-    return INVALID_DOUBLE
+    return (this * target / target.magnitude)
   }
 
   fun vectorProject(target: Vector2D): Vector2D {
