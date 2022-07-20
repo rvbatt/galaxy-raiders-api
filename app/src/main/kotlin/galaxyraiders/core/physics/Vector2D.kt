@@ -12,7 +12,11 @@ data class Vector2D(val dx: Double, val dy: Double) {
     get() = Math.sqrt(Math.pow(this.dx, 2.0) + Math.pow(this.dy, 2.0))
 
   val radiant: Double
-    get() = INVALID_DOUBLE
+    get() = if (dy / magnitude < 0)
+              {-Math.abs(Math.acos(dx / magnitude))}
+            else
+              {Math.abs(Math.acos(dx / magnitude))}
+    
 
   val degree: Double
     get() = INVALID_DOUBLE
