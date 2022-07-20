@@ -18,7 +18,7 @@ data class Point2D(val x: Double, val y: Double) {
   }
 
   fun impactVector(p: Point2D): Vector2D {
-    return INVALID_VECTOR
+    return Vector2D(Math.abs(p.x - this.x), Math.abs(p.y - this.y))
   }
 
   fun impactDirection(p: Point2D): Vector2D {
