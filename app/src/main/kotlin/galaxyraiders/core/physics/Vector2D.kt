@@ -21,7 +21,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
     get() = Math.toDegrees(radiant)
 
   val unit: Vector2D
-    get() = INVALID_VECTOR
+    get() = Vector2D(dx / magnitude, dy / magnitude)
 
   val normal: Vector2D
     get() = INVALID_VECTOR
