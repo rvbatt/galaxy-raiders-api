@@ -43,7 +43,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
   }
 
   operator fun plus(p: Point2D): Point2D {
-    return INVALID_POINT
+    return Point2D(p.x + this.dx, p.y + this.dy)
   }
 
   operator fun unaryMinus(): Vector2D {
