@@ -16,10 +16,9 @@ data class Vector2D(val dx: Double, val dy: Double) {
               {-Math.abs(Math.acos(dx / magnitude))}
             else
               {Math.abs(Math.acos(dx / magnitude))}
-    
 
   val degree: Double
-    get() = INVALID_DOUBLE
+    get() = Math.toDegrees(radiant)
 
   val unit: Vector2D
     get() = INVALID_VECTOR
