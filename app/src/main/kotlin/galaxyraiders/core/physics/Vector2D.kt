@@ -9,7 +9,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
   }
 
   val magnitude: Double
-    get() = INVALID_DOUBLE
+    get() = Math.sqrt(Math.pow(this.dx, 2.0) + Math.pow(this.dy, 2.0))
 
   val radiant: Double
     get() = INVALID_DOUBLE
