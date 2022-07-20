@@ -35,7 +35,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
   }
 
   operator fun times(v: Vector2D): Double {
-    return INVALID_DOUBLE
+    return v.dx * this.dx + v.dy * this.dy
   }
 
   operator fun plus(v: Vector2D): Vector2D {
